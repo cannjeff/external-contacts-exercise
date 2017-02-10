@@ -1,0 +1,32 @@
+<div class="contact-list">
+  <div class="panel panel-default">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th class="checkbox-column"></th>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Title</th>
+          <th>Phone</th>
+          <th>Ext.</th>
+          <th>Fax</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="contact in vm.contacts">
+          <td class="checkbox-column">
+            <input type="checkbox" ng-model="contact.selected" />
+          </td>
+          <td>{{ contact.type }}</td>
+          <td>{{ contact.name }}</td>
+          <td>{{ contact.title }}</td>
+          <td>{{ contact.phone | bcTelephone:'format' }}</td>
+          <td>{{ contact.ext }}</td>
+          <td>{{ contact.fax | bcTelephone:'format' }}</td>
+          <td>{{ contact.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

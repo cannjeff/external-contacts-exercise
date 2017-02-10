@@ -1,0 +1,23 @@
+.contact-list {
+  padding-right: 20px;
+
+  .table {
+    th, td {
+      padding: 10px 20px;
+    }
+    th {
+      color: $brand-primary;
+      height: 55px;
+      vertical-align: middle;
+    }
+    td {
+      color: $gray-light;
+    }
+    .checkbox-column {
+      padding: 10px;
+    }
+  }
+  .table-bordered > thead > tr > th {
+    border-bottom-width: 1px;
+  }
+}
