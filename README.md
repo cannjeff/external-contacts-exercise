@@ -9,12 +9,12 @@
 ## Installation
 * Clone this repository
 * Install dependencies
-  ```bash
-  $ npm install
-  ```
-  ```
-  $ bower install
-  ```
+```bash
+$ npm install
+```
+```
+$ bower install
+```
 
 ## Running
 external-contacts-exercise uses [Gulp](http://gulpjs.com/) and [Browsersync](https://browsersync.io/) for a streamlined development environment. To start the development server use:
