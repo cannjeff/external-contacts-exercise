@@ -78,7 +78,7 @@ $transition-timing: 200ms;
 .contact-list-wrapper {
   transition: $transition-timing all ease-out;
   max-height: 500px;
-  overflow: hidden;
+  overflow-y: auto;
 
   &.collapsed {
     max-height: 0px;
