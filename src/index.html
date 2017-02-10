@@ -38,7 +38,7 @@
             <span class="toggle-label" ng-show="!main.expanded">Expand</span>
           </div>
         </div>
-        <div class="contact-list-wrapper" ng-class="">
+        <div class="contact-list-wrapper" ng-class="{'collapsed': !main.expanded}">
           <p class="description">Select the client contacts associated with this offer</p>
           <contact-list contacts="main.contacts"></contact-list>
           <button type="button" class="btn btn-primary" ng-click="main.addContact()">Add Contact</button>

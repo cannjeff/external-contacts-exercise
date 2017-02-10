@@ -5,6 +5,7 @@
 $navbar-inverse-link-color: #5AADBB;
 $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
 $brand-primary: rgb(66, 159, 218);
+$transition-timing: 200ms;
 
 /**
  *  Do not remove the comments below. It's the markers used by wiredep to inject
@@ -64,7 +65,7 @@ $brand-primary: rgb(66, 159, 218);
       .two { transform: translate(-50%, -50%) rotate(0deg); }
     }
     .bar {
-      transition: 200ms all ease-out;
+      transition: $transition-timing all ease-out;
       position: absolute;
       height: 2px;
       width: 15px;
@@ -75,6 +76,14 @@ $brand-primary: rgb(66, 159, 218);
   }
 }
 .contact-list-wrapper {
+  transition: $transition-timing all ease-out;
+  max-height: 500px;
+  overflow: hidden;
+
+  &.collapsed {
+    max-height: 0px;
+  }
+
   .description {
     color: $gray-light;
     padding-bottom: 20px;

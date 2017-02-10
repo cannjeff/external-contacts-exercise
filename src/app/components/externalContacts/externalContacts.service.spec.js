@@ -1,6 +1,10 @@
 describe('service externalContacts', () => {
   beforeEach(angular.mock.module('testOne'));
 
+  beforeEach(inject((externalContacts) => {
+    spyOn(externalContacts, 'getExternalContacts').and.returnValue([{}, {}, {}, {}, {}]);
+  }));
+
   it('should be registered', inject(externalContacts => {
     expect(externalContacts).not.toEqual(null);
   }));
@@ -14,7 +18,7 @@ describe('service externalContacts', () => {
       const data = externalContacts.getExternalContacts();
       expect(data).toEqual(jasmine.any(Array));
       expect(data[0]).toEqual(jasmine.any(Object));
-      expect(data.length > 5).toBeTruthy();
+      expect(data.length >= 5).toBeTruthy();
     }));
   });
 });
